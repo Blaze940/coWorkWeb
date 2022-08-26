@@ -1,6 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body { margin: 0; font-family: "Poppins", sans-serif; }
+
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+white-color {
+    color: #fff;
+}
+
+black-color {
+    color: #000;
+}
+
+primary{
+  color: #130634;
+}
+
+accent{
+  color: #ffab00;
+}
+
+accent-low-opacity{
+  color: #f7be1f5e;
+}
+
+primary-low-opacity{
+  color: #1306345d;
+}
+
+achor-tag-collor{
+  color: darkblue;
+}
+
+achor-tag-darkTheme{
+  color: lightseagreen;
+}
+
+button {
+  border-radius: 0.5rem;
+  transition: transform 250ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
