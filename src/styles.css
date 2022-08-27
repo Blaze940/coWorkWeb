@@ -2,14 +2,14 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 html,
-body { margin: 0; font-family: "Poppins", sans-serif; }
+body { height :100% ; margin: 0; font-family: "Poppins", sans-serif; }
 
 ::-webkit-scrollbar {
-    width: 0.5em;
+    width: 0.6rem;
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+    background: darkgray;
+    border-radius: 0.5rem;
 }
 
 white-color {
@@ -65,5 +65,6 @@ button:focus {
     opacity: 1;
   }
 }
+
 
 
