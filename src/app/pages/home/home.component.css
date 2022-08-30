@@ -1,0 +1,191 @@
+
+
+.glass-container {
+   background: linear-gradient(to right bottom, #ffffffcc, #ffffff33);
+   backdrop-filter: blur(1rem);
+   border-radius: 1rem;
+   border: 0.01rem solid white;
+   margin : auto ;
+   border-top-right-radius : calc(10vw - 0.1rem);
+   border-bottom-left-radius: calc(4vw - 0.1rem);
+ }
+
+.hero-section {
+  background: linear-gradient(to right top, #743dff, #a47dff);
+  padding: calc(5vh + 1rem);
+}
+.glass-container {
+  background: linear-gradient(to right bottom, #ffffffcc, #ffffff33);
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  border: 0.01rem solid white;
+  margin: auto;
+  border-top-right-radius: calc(10vw - 0.1rem);
+  border-bottom-left-radius: calc(4vw - 0.1rem);
+  position: relative;
+  z-index: 1;
+}
+
+.glass-content {
+  background: linear-gradient(to right bottom, #ffffffcc, #ffffff33);
+  border-radius: 1rem;
+  border-top-right-radius: 0;
+  min-width: 20rem;
+  padding: calc(3vw + 0.2rem) 0;
+}
+
+/* Make action-btn color dark*/
+.action-btn {
+   background: #130634;
+   color: #fff;
+   border: 0.01rem solid #130634;
+ }
+
+.big-txt,h3, mat-icon{
+  margin : 0;
+  font-weight: bold;
+  opacity : 0.8;
+  line-height: 1.5 ;
+}
+.icon-text{
+  margin-top : 1rem;
+}
+
+mat-icon{
+  width : 1rem ;
+  margin-right : 1.5rem ;
+}
+
+button{
+  margin-top : 1rem ;
+  width : 48% ;
+}
+
+.circle1, circle2{
+  background : linear-gradient(to right bottom, #ffffffcc, #ffffff33);
+  position : absolute;
+  border-radius : 50% ;
+}
+
+.circle1{
+  height :20rem ;
+  width : 20rem ;
+  top : 1% ;
+  right : 1% ;
+}
+
+.circle2{
+  height : 10rem ;
+  width : 10rem;
+  bottom : 2%;
+  left :2%;
+}
+@media (max-width: 60rem) {
+  .glass-content{
+    min-width: 100%;
+  }
+  .big-txt{
+    font-size: calc(4vw + 0.2rem);
+    margin-bottom : 2rem;
+    text-align: center ;
+  }
+  h3{
+    font-size: calc(3vw + 0.2rem);
+  }
+  .actions-btn{
+    width : 85% ;
+    margin: auto ;
+    margin-top : 1rem ;
+  }
+}
+
+/* ------------------------------------------------------------- */
+
+.features-section {
+  margin: 4rem;
+}
+
+.mat-display-2 {
+  text-align: center;
+  line-height: 1.2;
+}
+
+article {
+  min-width: 16rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 1rem;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+@media (max-width: 38rem) {
+  h2,
+  h3,
+  a {
+    text-align: center;
+  }
+}
+
+/* ------------------------------------------------------------- */
+
+.cta-section {
+  padding: 4rem;
+  background: linear-gradient(to right top, #743dff, #a47dff);
+}
+
+-container {
+  background: linear-gradient(to right bottom, #ffffffcc, #ffffff33);
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  border: 0.01rem solid white;
+  margin : auto ;
+  border-top-right-radius : calc(10vw - 0.1rem);
+  border-bottom-left-radius: calc(4vw - 0.1rem);
+   padding: 2rem;
+ }
+
+.angularFire-logos {
+  margin-bottom: 1rem;
+}
+
+.angular-logo {
+  /*background: linear-gradient(to right bottom, #ffffffcc, #ffffff33);*/
+  /*backdrop-filter: blur(1rem);*/
+  /*border-radius: 1rem;*/
+  /*border: 0.01rem solid white;*/
+  /*margin : auto ;*/
+  /*border-bottom-left-radius: calc(4vw - 0.1rem);*/
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.mat-display-1,
+h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+button {
+  margin-top : 1rem ;
+  width: 30%;
+}
+
+.glassContainerDark {
+  background: linear-gradient(to right bottom, #2c2c2ccc, #00000033);
+  border: 0.01rem solid black;
+}
+
+@media (max-width: 38rem) {
+  button {
+    width: 90%;
+  }
+}
+

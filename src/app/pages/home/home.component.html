@@ -1,0 +1,172 @@
+<!--<p>Welcome Home {{name}}</p>-->
+<!--&lt;!&ndash;Parenthese abonnent au changement de la valeur de la variable name&ndash;&gt;-->
+<!--<input [(ngModel)]="name"/><br/>-->
+<!--<button mat-raised-button color="primary" (click)="resetNametoRobert()">Reset name to Robert</button>-->
+<!--<button mat-raised-button [color]="btnColor" (click)="changeBtnColor()">Switch Button color</button>-->
+
+<!-- Create a page named CoWorkingSpace.html and add the following code: -->
+
+<section class="hero-section">
+  <div class="glass-container" fxLayoutAlign="space-between center">
+    <div class="glass-content" fxFlex="35" fxFlex.sm="100" fxFlex.xs="100" fxLayoutAlign="center start">
+      <div fxFlex="80">
+        <h1 class="mat-display-2 big-txt">{{ title }}</h1>
+        <h2 class="mat-display-1 big-txt">{{ desc }}</h2>
+        <div fxLayout="column" fxLayoutAlign.sm="center center" fxLayoutAlign.xs="center center">
+          <div class="icon-text" fxLayoutAlign="start center">
+            <h3><mat-icon>volunteer_activism</mat-icon></h3>
+            <h3>Echangez votre experience</h3>
+          </div>
+          <div class="icon-text" fxLayoutAlign="start center">
+            <h3><mat-icon>book_online</mat-icon></h3>
+            <h3>Reservez matériels, salles et bien plus encore ...</h3>
+          </div>
+          <div class="icon-text" fxLayoutAlign="start center">
+            <h3><mat-icon>celebration</mat-icon></h3>
+            <h3>Découvrez de multiples activites </h3>
+          </div>
+        </div>
+        <div class="actions-btn" fxLayoutAlign="space-between center">
+          <button mat-flat-button routerLink="/signin" color="primary" >
+            Se connecter
+          </button>
+          <button mat-flat-button routerLink="/register" color="accent">
+            S'inscrire
+          </button>
+        </div>
+      </div>
+    </div>
+    <div fxLayoutAlign="center" fxHide.sm fxHide.xs>
+    <img fxFlex="80" src="../../../assets/businessMeeting.png" alt="" />
+  </div>
+  </div>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+</section>
+
+<section class="features-section" fxLayout="row wrap" fxLayoutAlign="space-between center">
+  <h1 class="mat-display-2" fxFlex="100"> {{title}} est la tendance du moment. Travaillez en groupe n'a jamais été aussi plaisant !</h1>
+  <article fxFlex="28" fxFlex.xs="100" fxLayout="column">
+    <img src="../../../assets/undraw_online_connection_6778.svg" alt="outilsInfo" />
+    <h2>Matériel et outils hauts de gamme</h2>
+    <h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+      asperiores quo eveniet sunt! Quidem architecto ea tempore optio esse
+      facere saepe non beatae, assumenda alias. Praesentium asperiores quo
+      eveniet sunt! Quidem architecto ea tempore optio esse facere saepe non
+      beatae, assumenda alias. Dolores soluta doloremque suscipit vitae?
+      <ul style="list-style: none">
+        <li>
+          <mat-icon>laptop</mat-icon>
+          PC portable
+        </li>
+        <li>
+          <mat-icon>wifi</mat-icon>
+          WIFI haut debit
+        </li>
+        <li>
+          <mat-icon>desktop_windows</mat-icon>
+          PC fixe
+        </li>
+        <li>
+          <mat-icon>print</mat-icon>
+          Imprimante
+        </li>
+      </ul>
+    </h3>
+  </article>
+  <article fxFlex="28" fxFlex.xs="100" fxLayout="column">
+    <img src="../../../assets/coWorkingSpace.jpg" alt="coWork_space" />
+    <h2>Espaces privatisés dans tout Paris</h2>
+    <h3>
+      Reservations à Bastille, Odéon, Place d'Italie, Republique ! <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+      asperiores quo eveniet sunt! Quidem architecto ea tempore optio esse
+      facere saepe non beatae, assumenda alias. Praesentium asperiores quo
+      eveniet sunt! Quidem architecto ea tempore optio esse facere saepe non
+      beatae, assumenda alias. Dolores soluta doloremque suscipit vitae?
+      <ul style="list-style: none">
+        <li>
+          <mat-icon>groups</mat-icon>
+          Salon
+        </li>
+        <li>
+          <mat-icon>meeting_room</mat-icon>
+          Salle de réunion
+        </li>
+        <li>
+          <mat-icon>wifi_calling_3</mat-icon>
+          Salle d'appel
+        </li>
+      </ul>
+    </h3>
+  </article>
+  <article fxFlex="28" fxFlex.xs="100" fxLayout="column">
+    <img src="../../../assets/_friends_bbq_illustration.jpg" alt="friendBBQ" />
+    <h2>Activites et repas</h2>
+    <h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+      asperiores quo eveniet sunt! Quidem architecto ea tempore optio esse
+      facere saepe non beatae, assumenda alias. Praesentium asperiores quo
+      eveniet sunt! Quidem architecto ea tempore optio esse facere saepe non
+      beatae, assumenda alias. Dolores soluta doloremque suscipit vitae?
+      <ul style="list-style: none">
+        <li>
+          <mat-icon>local_cafe</mat-icon>
+          Cafés
+        </li>
+        <li>
+          <mat-icon>local_dining</mat-icon>
+          Restaurants
+        </li>
+        <li>
+          <mat-icon>local_drink</mat-icon>
+          Boissons
+        </li>
+        <li>
+          <mat-icon>local_florist</mat-icon>
+          Fleurs
+        </li>
+        <li>
+          <mat-icon>local_library</mat-icon>
+          Bibliothèques
+        </li>
+        <li>
+          <mat-icon>local_parking</mat-icon>
+          Parking
+        </li>
+        <li>
+          <mat-icon>local_play</mat-icon>
+          Jeux
+        </li>
+      </ul>
+    </h3>
+  </article>
+</section>
+
+
+<section
+  class="cta-section"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+>
+  <div
+    class="cta-section-container"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+  >
+    <div class="angularFire-logos" fxLayout="row" fxLayoutAlign="center center">
+      <img
+        class="angular-logo"
+        fxFlex="15"
+        src="../../../assets/coWorkLogo.png"
+        alt="logo-angular"
+      />
+    </div>
+    <div class="mat-display-1">Procurez-vous votre {{title}} Card dés aujourd'hui</div>
+    <h2>Abonnements aux 1001 privilèges </h2>
+    <button mat-raised-button color="primary" routerLink="/register">
+      Commencer
+    </button>
+  </div>
+</section>
