@@ -9,18 +9,20 @@ import {RouterModule} from "@angular/router";
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import {MatIconModule} from "@angular/material/icon";
 import { HomeComponent } from './pages/home/home.component';
-import {FormsModule} from "@angular/forms";
-import { ListSpaceComponent } from './components/list-space/list-space.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MaterialUiModule} from "./material-ui/material-ui.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { RegisterComponent } from './pages/register/register.component';
+import { SigninComponent } from './pages/signin/signin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
     HomeComponent,
-    ListSpaceComponent,
+    RegisterComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MatCheckboxModule,
     MaterialUiModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
