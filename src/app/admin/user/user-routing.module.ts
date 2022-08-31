@@ -10,13 +10,13 @@ const routes: Routes = [
     path: '', component  : UIndexComponent
   },
   {
-    path: 'edit/:id', component  : UEditComponent
+    path: 'edit/:uid', component  : UEditComponent
   },
   {
     path: 'add', component  : UAddComponent
   },
   {
-    path:'delete/id', component : UDeleteComponent
+    path:'delete/:uid', component : UDeleteComponent
   }
 ];
 

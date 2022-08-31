@@ -1,6 +1,21 @@
+.admin_body {
+  display : flex ;
+  background: linear-gradient(to right top, #743dff, #a47dff);;
+}
+.menu{
+  width : 20% ;
+  height : 100% ;
+  background : linear-gradient(to right top, #743dff, #a47dff);;
+  border-right : 1px solid #ccc ;
+  flex-grow:2 ;
+}
 .admin_container{
-    width: 100%;
-    height: 100%;
-    background-color: darkviolet;
-    border : 1px solid black;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right top, #743dff, #a47dff);
+  padding: calc(5vh + 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

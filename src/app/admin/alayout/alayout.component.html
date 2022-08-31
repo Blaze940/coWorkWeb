@@ -1,8 +1,9 @@
-<p>alayout works!</p>
-
-<div class="menu">
-  Sidemenu
-</div>
-<div class="admin_container" style>
-  <router-outlet></router-outlet>
+<app-aheader></app-aheader>
+<div class="admin_body">
+  <div class="menu">
+    <app-sidemenu></app-sidemenu>
+  </div>
+  <div class="admin_container" >
+    <router-outlet></router-outlet>
+  </div>
 </div>

@@ -5,17 +5,21 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { AlayoutComponent } from './alayout/alayout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
+import { AheaderComponent } from './aheader/aheader.component';
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
   declarations: [
     AlayoutComponent,
     DashboardComponent,
-    SidemenuComponent
+    SidemenuComponent,
+    AheaderComponent
   ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        AdminRoutingModule,
+        MatButtonModule
+    ]
 })
 export class AdminModule { }
