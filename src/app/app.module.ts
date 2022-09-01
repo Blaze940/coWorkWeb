@@ -13,16 +13,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MaterialUiModule} from "./material-ui/material-ui.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
-import { RegisterComponent } from './pages/register/register.component';
-import { SigninComponent } from './pages/signin/signin.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
     HomeComponent,
-    RegisterComponent,
-    SigninComponent,
   ],
   imports: [
     BrowserModule,

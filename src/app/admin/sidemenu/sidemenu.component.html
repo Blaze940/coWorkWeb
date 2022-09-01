@@ -1,9 +1,12 @@
 <nav>
-  <div class="sidemenu_body"> Menu </div>
-  <button mat-raised-button color="warn" routerLink="/">Retour accueil</button>
-  <ul >
+  <div class="sidemenu_body"> <h2>Menu</h2> </div>
+  <button mat-raised-button color="basic" routerLink="/">Retour accueil</button>
+  <ul style="list-style: none">
     <li> <a routerLink="dashboard">Dashboard</a></li>
     <li> <a routerLink="user">User</a></li>
+    <ul>
+      <li><a routerLink="user/add">Ajouter</a></li>
+    </ul>
   </ul>
 </nav>
 
