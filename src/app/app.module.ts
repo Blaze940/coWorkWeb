@@ -13,6 +13,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MaterialUiModule} from "./material-ui/material-ui.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MaterialUiModule,
     FlexLayoutModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
