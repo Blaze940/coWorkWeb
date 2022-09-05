@@ -7,6 +7,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { AheaderComponent } from './aheader/aheader.component';
 import {MatButtonModule} from "@angular/material/button";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatTableModule} from "@angular/material/table";
+import {HttpClientModule} from "@angular/common/http";
+import {MaterialUiModule} from "../material-ui/material-ui.module";
 
 
 @NgModule({
@@ -16,10 +20,14 @@ import {MatButtonModule} from "@angular/material/button";
     SidemenuComponent,
     AheaderComponent
   ],
-    imports: [
-        CommonModule,
-        AdminRoutingModule,
-        MatButtonModule
-    ]
+  imports: [
+    CommonModule,
+    AdminRoutingModule,
+    MatButtonModule,
+    MatPaginatorModule,
+    MatTableModule,
+    HttpClientModule,
+    MaterialUiModule
+  ]
 })
 export class AdminModule { }

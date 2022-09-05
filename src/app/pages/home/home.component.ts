@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UtilitiesService} from "../../services/utilities.service";
+import {UtilitiesService} from "../../_services/utilities.service";
 
 @Component({
   selector: 'app-home',

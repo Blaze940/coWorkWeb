@@ -6,6 +6,8 @@ import { UIndexComponent } from './u-index/u-index.component';
 import { UEditComponent } from './u-edit/u-edit.component';
 import { UAddComponent } from './u-add/u-add.component';
 import { UDeleteComponent } from './u-delete/u-delete.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { UDeleteComponent } from './u-delete/u-delete.component';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class UserModule { }

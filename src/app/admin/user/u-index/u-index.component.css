@@ -1,0 +1,68 @@
+.table table-striped{
+    background-color: blue;
+}
+.mat-elevation-z8{
+    background-color: blue;
+}
+.container{
+    background-color: blue;
+}
+/*set the background color of the table*/
+.mat-table{
+  /*make it taking the full width*/
+  /* make the table bigger */
+  width: 100%;
+    background-color: antiquewhite;
+}
+/*set the styleTitle in top center*/
+/* space mat-cell correctly */
+.mat-cell{
+    padding: 0 24px 0 24px;
+  /*separe it with the border*/
+    border-bottom: 1px solid black;
+  /*separe column with the border*/
+    border-right: 1px solid black;
+  /*separe completely the column*/
+    border-left: 1px solid black;
+  /*separe title with the border*/
+    border-top: 1px solid black;
+}
+/*set the styleTitle in top center*/
+.mat-header-cell{
+    padding: 0 24px 0 24px;
+  /*separe it with the border*/
+    border-bottom: 1px solid black;
+  /*separe column with the border*/
+    border-right: 1px solid black;
+  /*separe completely the column*/
+    border-left: 1px solid black;
+  /*separe title with the border*/
+    border-top: 1px solid black;
+  /* set size bigger, bold and color in red*/
+    font-size: 15px;
+    color: red;
+    font-weight: bold;
+}
+.styleTitle{
+  /*set it in middle*/
+    text-align: center;
+    color :black ;
+    font-size: 20px;
+    font-weight: bold;
+  /* Set styleTitle in a box with hover*/
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 5px;
+    margin: 5px;
+    /*add effect and style*/
+    transition: 0.3s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+
+}
+/*make the table taking the full width*/
+
+/* Set styleTitle in a box with hover*/
+
+
