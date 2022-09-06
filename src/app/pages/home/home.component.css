@@ -12,6 +12,7 @@
 
 .hero-section {
   background: linear-gradient(to right top, #743dff, #a47dff);
+  /*background :  linear-gradient(to right top, #330066, darkviolet);*/
   padding: calc(5vh + 1rem);
 }
 .glass-container {
@@ -138,6 +139,7 @@ a {
 .cta-section {
   padding: 4rem;
   background: linear-gradient(to right top, #743dff, #a47dff);
+  /*background :  linear-gradient(to right top, #330066, darkviolet);*/
 }
 
 -container {

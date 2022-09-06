@@ -1,4 +1,3 @@
-
 .content {
   height: calc(100vh - 130px);
   border-radius: 10px;
@@ -16,11 +15,13 @@ mat-sidenav {
   width: 200px;
   border-right: none;
   /*background: #002b5c;*/
-  background :  linear-gradient(to right top, #743dff, #a47dff);
+  background :  linear-gradient(to right top, black, #330066);
+  /*background : #330066 ;*/
   color: white;
   border-radius: 10px;
   padding: 16px;
   text-align: center;
+  display : flex ;
 }
 .menu-button {
   width: 100%;
@@ -56,4 +57,9 @@ mat-divider {
   margin-top: 16px;
   margin-bottom: 16px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.role{
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size : 0.6rem;
 }

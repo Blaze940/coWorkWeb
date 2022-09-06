@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TokenService} from "../../_services/token.service";
 
 @Component({
   selector: 'app-alayout',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tokenService : TokenService) { }
 
   ngOnInit(): void {
+  }
+
+  logout() {
+    this.tokenService.clearToken();
+    //Plus tard pour gerer admin et client
+    //localStorage.removeItem('role');
   }
 
 }
