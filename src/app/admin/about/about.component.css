@@ -1,0 +1,22 @@
+/* mat title in center*/
+mat-card-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* mat card in middle center*/
+mat-card {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+mat-card-content {
+  text-align: justify;
+}
+/*mat subtitle in center*/
+mat-card-subtitle {
+  text-align: center;
+}
+/*mat-button in center*/
+mat-card-actions {
+  text-align: center;
+}
