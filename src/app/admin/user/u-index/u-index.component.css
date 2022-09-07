@@ -1,77 +1,71 @@
-.table table-striped{
-    background-color: blue;
+
+/*Put the button above each text and place them in the center of the box*/
+button {
+  margin: 0 auto;
+  display: block;
 }
-.mat-elevation-z8{
-    background-color: blue;
+/*Put the text above each button and place them in the center of the box*/
+input {
+  margin: 0 auto;
+  display: block;
 }
-.container{
-    background-color: blue;
+/*Put the text above each button and place them in the center of the box*/
+select {
+  margin: 0 auto;
+  display: block;
 }
-/*set the background color of the table*/
-.mat-table{
-  /*make it taking the full width*/
-  /* make the table bigger */
+
+/* Language: css */
+/* Path: src\app\admin\user\u-edit\u-edit.component.css */
+
+.content{
   width: 100%;
-    background-color: white;
-}
-/*set the styleTitle in top center*/
-/* space mat-cell correctly */
-.mat-cell{
-    padding: 0 24px 0 24px;
-  /*separe it with the border*/
-    border-bottom: 1px solid black;
-  /*separe column with the border*/
-    border-right: 1px solid black;
-  /*separe completely the column*/
-    border-left: 1px solid black;
-  /*separe title with the border*/
-    border-top: 1px solid black;
-}
-/*set the styleTitle in top center*/
-.mat-header-cell{
-    padding: 0 24px 0 24px;
-  /*separe it with the border*/
-    border-bottom: 1px solid black;
-  /*separe column with the border*/
-    border-right: 1px solid black;
-  /*separe completely the column*/
-    border-left: 1px solid black;
-  /*separe title with the border*/
-    border-top: 1px solid black;
-  /* set size bigger, bold and color in red*/
-    font-size: 16px;
-    color: black;
-    font-weight: bold;
-}
-.styleTitle{
-  /*set it in middle*/
-    text-align: center;
-    color : white ;
-    font-size: 20px;
-    font-weight: bold;
-  /* Set styleTitle in a box with hover*/
-    border: 1px solid black;
-    border-radius: 5px;
-    background : #330066 ;
-    padding: 5px;
-    margin: 5px;
-    /*add effect and style*/
-    transition: 0.3s;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  max-width: 600px;
+  padding: initial;
+  font-size : 20px ;
+  /*place it in center of their box, just below mat icons*/
+  text-align: center;
+  /* put space betweent the text and button*/
+  margin-bottom: 20px;
 
 }
 
-/*Put the bottom of the table in black*/
-.mat-paginator{
-  background: white ;
-  color : black ;
-  /*put button inside in white*/
+.contentList{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
 }
-.idColor{
-  color : darkred ;
+.contentAdd{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
 }
-/*make the table taking the full width*/
+.contentEdit {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+.contentDelete {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+/*make featuresection longer and spâce between box larger*/
+.features-section {
+  color : white ;
+  height: 100%;
+  width: 100%;
+  max-width: 2000px;
+  padding: 25px;
+  margin: 0 auto;
+  text-align: center;
 
-/* Set styleTitle in a box with hover*/
-
-
+  background :  linear-gradient(to right top, black, #330066);
+  /*border radius*/
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}

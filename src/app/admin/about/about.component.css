@@ -2,6 +2,10 @@
 mat-card-title {
   text-align: center;
   margin-bottom: 30px;
+  /* bigger */
+  font-size: 30px;
+  /*bold*/
+  font-weight: bold;
 }
 /* mat card in middle center*/
 mat-card {
@@ -11,12 +15,38 @@ mat-card {
 }
 mat-card-content {
   text-align: justify;
+  text-justify: inter-word;
+  /*bigger font*/
+  color: black ;
+  font-size: 20px;
+  /* bold font*/
 }
 /*mat subtitle in center*/
 mat-card-subtitle {
   text-align: center;
+  /* bigger */
+  font-size: 20px;
+  /* bold */
+  font-weight: bold;
 }
 /*mat-button in center*/
 mat-card-actions {
   text-align: center;
+}
+.angularFire-logos {
+  /* smaller and in center*/
+  /*width: 50%;*/
+  /*margin: auto;*/
+  position : center ;
+
+}
+.angular-logo {
+  width: 7%;
+  /*put ii in the middle of the card*/
+  margin: auto;
+  /* center */
+  display: block;
+}
+.features-section {
+  margin: 4rem;
 }

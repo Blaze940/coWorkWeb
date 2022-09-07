@@ -4,6 +4,7 @@ import {UIndexComponent} from "./u-index/u-index.component";
 import {UEditComponent} from "./u-edit/u-edit.component";
 import {UAddComponent} from "./u-add/u-add.component";
 import {UDeleteComponent} from "./u-delete/u-delete.component";
+import {UAllComponent} from "./u-all/u-all.component";
 
 const routes: Routes = [
   {
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path:'delete/:uid', component : UDeleteComponent
+  },
+  {
+    path:'all', component : UAllComponent
   }
 ];
 

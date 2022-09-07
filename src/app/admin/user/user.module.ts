@@ -8,6 +8,9 @@ import { UAddComponent } from './u-add/u-add.component';
 import { UDeleteComponent } from './u-delete/u-delete.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { UAllComponent } from './u-all/u-all.component';
+import {MaterialUiModule} from "../../material-ui/material-ui.module";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -15,13 +18,16 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     UIndexComponent,
     UEditComponent,
     UAddComponent,
-    UDeleteComponent
+    UDeleteComponent,
+    UAllComponent
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MaterialUiModule,
+    FlexLayoutModule
   ]
 })
 export class UserModule { }
