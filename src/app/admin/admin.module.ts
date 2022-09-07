@@ -12,6 +12,7 @@ import {MatTableModule} from "@angular/material/table";
 import {HttpClientModule} from "@angular/common/http";
 import {MaterialUiModule} from "../material-ui/material-ui.module";
 import { AboutComponent } from './about/about.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -22,14 +23,15 @@ import { AboutComponent } from './about/about.component';
     AheaderComponent,
     AboutComponent
   ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    MatButtonModule,
-    MatPaginatorModule,
-    MatTableModule,
-    HttpClientModule,
-    MaterialUiModule
-  ]
+    imports: [
+        CommonModule,
+        AdminRoutingModule,
+        MatButtonModule,
+        MatPaginatorModule,
+        MatTableModule,
+        HttpClientModule,
+        MaterialUiModule,
+        FlexLayoutModule
+    ]
 })
 export class AdminModule { }
