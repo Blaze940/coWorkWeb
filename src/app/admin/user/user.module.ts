@@ -11,6 +11,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import { UAllComponent } from './u-all/u-all.component';
 import {MaterialUiModule} from "../../material-ui/material-ui.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MatTableModule,
     MatPaginatorModule,
     MaterialUiModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class UserModule { }

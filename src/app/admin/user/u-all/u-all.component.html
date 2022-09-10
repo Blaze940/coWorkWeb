@@ -60,9 +60,16 @@
         <th mat-header-cell *matHeaderCellDef> Adresse </th>
         <td mat-cell *matCellDef="let userList"> {{userList.address}} </td>
       </ng-container>
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let userList">
+          <button mat-flat-button color="primary" (click)="sendTo('edit', userList)">Edit</button>
+          <button mat-flat-button color="warn" (click)="sendTo('delete', userList)">Delete</button>
+        </td>
+      </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let userList; columns: displayedColumns;"></tr>
+      <tr mat-row *matRowDef="let user ; columns: displayedColumns;"></tr>
     </table>
 
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>

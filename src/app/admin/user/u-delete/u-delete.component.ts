@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-u-delete',
@@ -7,15 +8,23 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./u-delete.component.css']
 })
 export class UDeleteComponent implements OnInit {
-
-  constructor(private activated : ActivatedRoute) { }
+  lastname: string = '';
+  surname: string = '';
+  constructor(private activated : ActivatedRoute,
+              private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.activated.params.subscribe(
-      (data) => {
-        console.log(data);
+    let uid = this.activated.snapshot.paramMap.get('uid') ;
+    console.log(uid) ;
+
+    this.http.delete('http://localhost:5000/API/user/'+uid).subscribe(
+      (user: any) => {
+        this.lastname = user.lastname;
+        this.surname = user.surname;
+        console.log('User with id : '+uid+' has been deleted');
       }
-    );
+      );
   }
+
 
 }
