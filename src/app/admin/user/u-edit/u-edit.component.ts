@@ -12,7 +12,7 @@ export class UEditComponent implements OnInit {
    userForm : IUser = {
     id : 0,
     pseudo: '',
-    email: 'toto',
+    email: '',
     password: '',
     role: '',
     mealTray: '',

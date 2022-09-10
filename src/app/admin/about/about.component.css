@@ -35,17 +35,19 @@ mat-card-actions {
 }
 .angularFire-logos {
   /* smaller and in center*/
-  /*width: 50%;*/
-  /*margin: auto;*/
+  width: 50%;
+  margin: auto;
   position : center ;
 
 }
 .angular-logo {
   width: 7%;
-  /*put ii in the middle of the card*/
+  /*put it in the middle of the card*/
   margin: auto;
   /* center */
   display: block;
+  /* center */
+  position : center;
 }
 .features-section {
   margin: 4rem;
