@@ -15,7 +15,6 @@ import {MaterialUiModule} from "./material-ui/material-ui.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {HttpClientModule} from "@angular/common/http";
 import { AlertComponent } from './components/alert/alert.component';
-import {TokenInterceptorProvider} from "./_helpers/token.interceptor";
 
 
 @NgModule({
@@ -39,7 +38,7 @@ import {TokenInterceptorProvider} from "./_helpers/token.interceptor";
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [TokenInterceptorProvider], ///tjrs actif maintenant
+  providers: [], ///tjrs actif maintenant
   bootstrap: [AppComponent]
 })
 export class AppModule { }
