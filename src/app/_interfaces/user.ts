@@ -5,7 +5,7 @@ export interface IUser {
     password: string;
     role: string;
     mealTray: string;
-    booked: string[];
+    booked: any[];
     participations: string[];
     surname: string;
     lastname: string;

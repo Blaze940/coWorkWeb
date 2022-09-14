@@ -26,6 +26,31 @@
       </mat-error>
     </mat-form-field>
   </div>
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Role (CLIENT OU ADMIN)" name="role" [(ngModel)]="userForm.role" #role="ngModel" required>
+      <mat-error *ngIf="role.invalid && (role.dirty || role.touched)">
+        Role is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Adresse" name="address" [(ngModel)]="userForm.address" #address="ngModel" required>
+      <mat-error *ngIf="address.invalid && (address.dirty || address.touched)">
+        Adresse is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group" >
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Reservations" name="booked" [(ngModel)]="userForm.booked" #booked="ngModel">
+      <mat-error *ngIf="booked.invalid && (booked.dirty || booked.touched)">
+        Reservation is invalid
+      </mat-error>
+    </mat-form-field>
+  </div>
+
 
   <div class="action-btn" fxLayoutAlign="space-between center">
     <button class="connexionButton" mat-flat-button color="primary"  type="submit" [disabled]="f.form.invalid">Sauvegarder</button>
