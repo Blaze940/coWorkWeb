@@ -37,20 +37,41 @@ export class RegistrationComponent implements OnInit {
 
   onSubmit() {
     //const a = this.loginForm.get('email')?.value ;
-    this.authService.login(this.loginForm.value).subscribe(
-      (data : IToken) => {
-        console.log(data.token);
-        this.tokenService.saveToken(data.token);
-        console.log("User logué : " + this.loginForm);
-        this.us.setCurrentUser(this.loginForm.get('email')?.value);
-        this.us.setAllUser() ;
-      },
+    this.authService.register(this.loginForm.value).subscribe(
+      (count : any) => {
+        this.authService.login(this.loginForm.value).subscribe(
+          (data : IToken) => {
+            console.log(data.token);
+            this.tokenService.saveToken(data.token);
+            console.log("User logué : " + this.loginForm);
+            this.us.setCurrentUser(this.loginForm.get('email')?.value);
+            this.us.setAllUser() ;
+          },
+          (error) => {
+            //this.alert.error(error);
+            console.log(error);
+          }
+        );
+    },
       (error) => {
-        //this.alert.error(error);
-        console.log(error);
+        console.log(error) ;
       }
-    );
-    //
+
+    )
+    // this.authService.login(this.loginForm.value).subscribe(
+    //   (data : IToken) => {
+    //     console.log(data.token);
+    //     this.tokenService.saveToken(data.token);
+    //     console.log("User logué : " + this.loginForm);
+    //     this.us.setCurrentUser(this.loginForm.get('email')?.value);
+    //     this.us.setAllUser() ;
+    //   },
+    //   (error) => {
+    //     //this.alert.error(error);
+    //     console.log(error);
+    //   }
+    // );
+    // //
     //this.loginForm.get('email').value pour recuperer uniquement la valeur du mail
   }
 
