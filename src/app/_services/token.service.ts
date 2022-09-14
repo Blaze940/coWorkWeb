@@ -10,7 +10,7 @@ export class TokenService {
 
   saveToken(token : string) : void {
     localStorage.setItem('token', token);
-    this.router.navigate(['admin']);
+    // this.router.navigate(['admin']);
   }
   isLogged() : boolean {
     // !! permet de convertir une valeur en boolean
