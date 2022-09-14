@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AlayoutComponent } from './alayout/alayout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { AheaderComponent } from './aheader/aheader.component';
 import {MatButtonModule} from "@angular/material/button";
 import {MatPaginatorModule} from "@angular/material/paginator";
@@ -19,7 +18,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
   declarations: [
     AlayoutComponent,
     DashboardComponent,
-    SidemenuComponent,
     AheaderComponent,
     AboutComponent
   ],
