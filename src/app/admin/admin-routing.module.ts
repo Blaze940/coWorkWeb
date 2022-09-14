@@ -14,6 +14,10 @@ const routes: Routes = [
         path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule)
       },
       {
+        //Comme user est un module il faut le charger avec loadChildren
+        path: 'space', loadChildren: () => import('./space/space.module').then(m => m.SpaceModule)
+      },
+      {
         path: 'about', component : AboutComponent
       }
       ]

@@ -48,7 +48,6 @@ export class UAllComponent implements OnInit {
         console.log(error);
       }
     );
-    this.us.setAllUser() ;
     //console.log((this.us.getTabUser())) ;
   }
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator | undefined ;

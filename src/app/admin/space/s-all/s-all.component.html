@@ -1,0 +1,77 @@
+<!--<p>u-index works!</p>-->
+<!--<div>-->
+<!--  <table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--      <th>Action</th>-->
+<!--      <th>#</th>-->
+<!--      <th>Nom</th>-->
+<!--      <th>Prenom</th>-->
+<!--      <th>Email</th>-->
+<!--      <th>Date Creation</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--      <tr *ngFor="let user of spaceList">-->
+<!--        <td></td>-->
+
+<!--        <td>{{user.id}}</td>-->
+<!--        <td>{{user.lastname}}</td>-->
+<!--        <td>{{user.surname}}</td>-->
+<!--        <td>{{user.email}}</td>-->
+<!--        <td>{{user.dateSubscription |date: 'dd/MM/yy, HH:mm' }}</td>-->
+<!--      </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+<!--</div>-->
+
+<!-------------------------------------->
+
+<h2 class="styleTitle">Liste des espaces</h2>
+<div class="container">
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="table table-striped">
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> id </th>
+        <td mat-cell class="idColor" *matCellDef="let spaceList"> {{spaceList._id}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let spaceList"> {{spaceList.name | titlecase}} </td>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="localisation">
+        <th mat-header-cell *matHeaderCellDef> Localisation</th>
+        <td mat-cell *matCellDef="let spaceList"> {{spaceList.localisation}} </td>
+      </ng-container>
+      <ng-container matColumnDef="services">
+        <th mat-header-cell *matHeaderCellDef> Services </th>
+        <td mat-cell *matCellDef="let spaceList"> {{spaceList.services}} </td>
+      </ng-container>
+      <!-- Weight Column -->
+<!--      <ng-container matColumnDef="users">-->
+<!--        <th mat-header-cell *matHeaderCellDef> Utilisateurs </th>-->
+<!--        <td mat-cell *matCellDef="let spaceList"> {{spaceList.users}} </td>-->
+<!--      </ng-container>-->
+      <ng-container matColumnDef="maxLaptop">
+        <th mat-header-cell *matHeaderCellDef> PC max</th>
+        <td mat-cell *matCellDef="let spaceList"> {{spaceList.maxLaptop}} </td>
+      </ng-container>
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let spaceList">
+          <button mat-flat-button color="primary" (click)="sendTo('edit', spaceList)">Edit</button>
+          <button mat-flat-button color="warn" (click)="sendTo('delete', spaceList)">Delete</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let space ; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>

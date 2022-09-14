@@ -1,0 +1,56 @@
+<h2 class="styleTitle">Modification</h2>
+<br>
+<br>
+<form #f="ngForm" name="form" (ngSubmit)="f.form.valid && onSubmit()">
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Nom" name="name" [(ngModel)]="spaceForm.name" #name="ngModel" required>
+      <mat-error *ngIf="name.invalid && (name.dirty || name.touched)">
+        Name is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Localisation" name="localisation" [(ngModel)]="spaceForm.localisation" #localisation="ngModel" required>
+      <mat-error *ngIf="localisation.invalid && (localisation.dirty || localisation.touched)">
+        Localisation is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Users" name="users" [(ngModel)]="spaceForm.users" #users="ngModel" required>
+      <mat-error *ngIf="users.invalid && (users.dirty || users.touched)">
+        Users is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="PC Max" name="maxLaptop" [(ngModel)]="spaceForm.maxLaptop" #maxLaptop="ngModel" required>
+      <mat-error *ngIf="maxLaptop.invalid && (maxLaptop.dirty || maxLaptop.touched)">
+        Pc Max is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Services" name="services" [(ngModel)]="spaceForm.services" #services="ngModel" required>
+      <mat-error *ngIf="services.invalid && (services.dirty || services.touched)">
+        Services is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="action-btn" fxLayoutAlign="space-between center">
+    <button class="connexionButton" mat-flat-button color="primary"  type="submit" [disabled]="f.form.invalid">Sauvegarder</button>
+  </div>
+  <br>
+  <div class="action-btn" fxLayoutAlign="space-between center">
+    <button class="connexionButton" mat-flat-button color="warn" routerLink="/admin/space">Retour à la liste</button>
+  </div>
+</form>
+
+<!--</div>-->
+

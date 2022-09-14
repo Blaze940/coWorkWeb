@@ -1,0 +1,17 @@
+.styleTitle{
+  /*set it in middle*/
+  text-align: center;
+  color : white ;
+  font-size: 20px;
+  font-weight: bold;
+  /* Set styleTitle in a box with hover*/
+  border: 1px solid black;
+  border-radius: 5px;
+  background : #330066 ;
+  padding: 5px;
+  margin: 5px;
+  /*add effect and style*/
+  transition: 0.3s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
