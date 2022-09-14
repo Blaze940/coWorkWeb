@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AlayoutComponent } from './alayout/alayout.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AheaderComponent } from './aheader/aheader.component';
 import {MatButtonModule} from "@angular/material/button";
 import {MatPaginatorModule} from "@angular/material/paginator";
@@ -17,18 +16,19 @@ import { SAddComponent } from './space/s-add/s-add.component';
 import { SDeleteComponent } from './space/s-delete/s-delete.component';
 import { SEditComponent } from './space/s-edit/s-edit.component';
 import {FormsModule} from "@angular/forms";
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
   declarations: [
     AlayoutComponent,
-    DashboardComponent,
     AheaderComponent,
     AboutComponent,
     SAllComponent,
     SAddComponent,
     SDeleteComponent,
-    SEditComponent
+    SEditComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,

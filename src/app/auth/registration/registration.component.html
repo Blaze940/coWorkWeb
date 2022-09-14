@@ -1,0 +1,96 @@
+
+<section class="form-section">
+  <div class="form_container" fxLayoutAlign="space-between center">
+    <div class="form_content" fxFlex="35" fxFlex.sm="100" fxFlex.xs="100" fxLayoutAlign="center start">
+      <div fxFlex="80">
+        <h1 class="mat-display-1 big-txt">S'enregistrer</h1>
+        <form (submit)="onSubmit()" [formGroup]="loginForm">
+          <div class="form_inputs">
+            <mat-form-field class="full-width">
+              <input matInput type="text" formControlName="lastname" placeholder="Lastname">
+              <mat-error *ngIf="loginForm.get('lastname')?.hasError('required') && (loginForm.get('lastname')?.touched )" >
+                <span class="form_error">Lastname is required</span>
+              </mat-error>
+              <mat-error *ngIf="loginForm.get('lastname')?.hasError('minLength') && (loginForm.get('lastname')?.touched )" >
+                <span>Lastname should be at least 2 characters</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form_inputs">
+            <mat-form-field class="full-width">
+              <input matInput type="text" formControlName="surname" placeholder="Surname">
+              <mat-error *ngIf="loginForm.get('surname')?.hasError('required') && (loginForm.get('surname')?.touched )" >
+                <span class="form_error">Lastname is required</span>
+              </mat-error>
+              <mat-error *ngIf="loginForm.get('surname')?.hasError('minLength') && (loginForm.get('surname')?.touched )" >
+                <span>Lastname should be at least 2 characters</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form_inputs">
+            <mat-form-field class="full-width">
+              <input matInput type="text" formControlName="pseudo" placeholder="Pseudo">
+              <mat-error *ngIf="loginForm.get('pseudo')?.hasError('required') && (loginForm.get('pseudo')?.touched )" >
+                <span class="form_error">Lastname is required</span>
+              </mat-error>
+              <mat-error *ngIf="loginForm.get('pseudo')?.hasError('minLength') && (loginForm.get('pseudo')?.touched )" >
+                <span>Lastname should be at least 2 characters</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form_inputs">
+            <mat-form-field class="full-width">
+              <input matInput type="text" formControlName="email" placeholder="Email">
+              <mat-error *ngIf="loginForm.get('email')?.hasError('required') && (loginForm.get('email')?.touched )" >
+                <span class="form_error">Email is required</span>
+              </mat-error>
+              <mat-error *ngIf="loginForm.get('email')?.hasError('email') && (loginForm.get('email')?.touched )" >
+                <span>Email is invalid</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+            <div class="form_inputs">
+              <mat-form-field class="full-width">
+                <input matInput type="password" formControlName="password" placeholder="Password">
+                <mat-error *ngIf="loginForm.get('password')?.hasError('required') && (loginForm.get('password')?.touched)">
+                  <span>Password is required</span>
+                </mat-error>
+                <mat-error *ngIf="loginForm.get('password')?.hasError('minlength') && (loginForm.get('password')?.touched)">
+                  <span class="form_error">Password must be at least 6 characters long</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          <div class="actions-btn" fxLayoutAlign="space-between center">
+            <button class="connexionButton" mat-flat-button color="primary"  type="submit" [disabled]="loginForm.invalid">
+              Enregistrement
+            </button>
+          </div>
+        </form>
+
+        <div class ="register-link">
+          Déja membre ?
+          <a routerLink="/auth/login">
+            Se connecter
+          </a>
+        </div>
+        <br>
+        <div class="actions-btn" fxLayoutAlign="space-between center">
+          <button class="connexionButton" mat-flat-button color="accent" routerLink="/">
+            Home
+          </button>
+        </div>
+      </div>
+    </div>
+    <div fxLayoutAlign="center" fxHide.sm fxHide.xs>
+      <img fxFlex="80" src="../../../assets/businessMeeting.png" alt="" />
+    </div>
+  </div>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+</section>
+
+<!--Voir les valeurs de chaque champ du formulaire-->
+
+<!--<pre>-->
+<!--  {{loginForm.value | json}}-->
+<!--</pre>-->

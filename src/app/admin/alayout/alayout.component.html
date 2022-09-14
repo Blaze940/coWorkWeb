@@ -18,7 +18,7 @@
       src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
     />
 
-    <h4 class="name">John Smith</h4>
+    <h4 class="name">{{surname | titlecase}} {{lastname | uppercase}}</h4>
     <p class="designation">Software Engineer</p>
     <p class="role">{{role}}</p>
 
@@ -31,10 +31,6 @@
     <button mat-button class="menu-button" routerLink="profil">
       <mat-icon>person</mat-icon>
       <span>Profil</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="dashboard">
-      <mat-icon>dashboard</mat-icon>
-      <span>Dashboard</span>
     </button>
     <button mat-button class="menu-button" routerLink="user">
       <mat-icon>people</mat-icon>

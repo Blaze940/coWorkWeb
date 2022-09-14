@@ -1,0 +1,116 @@
+/*generate design from login.component.html  */
+.form-section {
+  background: linear-gradient(to right top, #743dff, #a47dff);
+  padding: calc(5vh + 1rem);
+}
+
+.form_container {
+  background: linear-gradient(to right bottom, #ffffffcc, #ffffff33);
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  border: 0.01rem solid white;
+  margin: auto;
+  border-top-right-radius: calc(10vw - 0.1rem);
+  border-bottom-left-radius: calc(4vw - 0.1rem);
+  position: relative;
+  z-index: 1;
+}
+.form_content {
+  background: linear-gradient(to right bottom, #ffffffcc, #ffffff33);
+  border-radius: 1rem;
+  border-top-right-radius: 0;
+  min-width: 20rem;
+  padding: calc(3vw + 0.2rem) 0;
+}
+.action-btn {
+  background: #130634;
+  color: #fff;
+  border: 0.01rem solid #130634;
+  /*put it in center*/
+}
+/* put connexionButton in center*/
+.connexionButton {
+  margin: auto;
+}
+
+.big-txt,h3, mat-icon{
+  /* Put it in top left center of the container */
+  text-align: center;
+  margin : 0px;
+  font-weight: bold;
+  opacity : 0.8;
+  line-height: 1.5 ;
+  padding-bottom: 2rem; /*espace entre email et sign in */
+}
+.icon-text{
+  margin-top : 1rem;
+}
+
+mat-icon{
+  width : 1rem ;
+  margin-right : 1.5rem ;
+}
+
+button{
+  margin-top : 1rem ;
+  width : 48% ;
+}
+
+.circle1, circle2{
+  background : linear-gradient(to right bottom, #ffffffcc, #ffffff33);
+  position : absolute;
+  border-radius : 50% ;
+}
+
+.circle1{
+  height :20rem ;
+  width : 20rem ;
+  top : 1% ;
+  right : 1% ;
+}
+
+.circle2{
+  height : 10rem ;
+  width : 10rem;
+  bottom : 2%;
+  left :2%;
+}
+
+@media (max-width: 60rem) {
+  .glass-content{
+    min-width: 100%;
+  }
+  .big-txt{
+    font-size: calc(4vw + 0.2rem);
+    margin-bottom : 2rem;
+    text-align: center ;
+  }
+  h3{
+    font-size: calc(3vw + 0.2rem);
+  }
+  .actions-btn{
+    width : 85% ;
+    margin: auto ;
+    margin-top : 1rem ;
+  }
+}
+
+
+/*put register-link below 'se connecter' and in center*/
+.register-link{
+  margin-top : 1rem ;
+  text-align: center ;
+}
+/* mat error in form_input should be in left and close to the input */
+/*mat-form-field well positionned*/
+mat-form-field{
+  width : 100% ;
+  margin-bottom : 1rem ;
+  /*font bold*/
+  font-weight : bold ;
+}
+
+.mat-error{
+  text-align: left ;
+  margin-left : 1rem ;
+}
