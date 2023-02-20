@@ -1,0 +1,67 @@
+
+<h2 class="styleTitle">Nouvelle reservation</h2>
+<br>
+<br>
+<form #f="ngForm" name="form" (ngSubmit)="f.form.valid && onSubmit()">
+<!--  Create a choice list for product thanks to valProduct-->
+  <select name="product" [(ngModel)]="reservationForm.product" required>
+    <!--  put a label "A reserver"-->
+    <option value="" disabled selected>A reserver</option>
+    <option *ngFor="let product of valProduct" [value]="product">{{product}}</option>
+  </select>
+  <br>
+  <br>
+  <div class="form-group">
+    <!--    place a date picker for reservationForm.date attribute-->
+    <mat-form-field class="full-width">
+      <input matInput [matDatepicker]="picker" placeholder="Date" name="date" [(ngModel)]="reservationForm.date" #date="ngModel" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="date.invalid && (date.dirty || date.touched)">
+        Date is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <br>
+
+  <!--  Create a choice list for date thanks to valDate-->
+
+<!--  Create a choice list for space thanks to valSpace-->
+  <select name="space" [(ngModel)]="reservationForm.space" required>
+    <!--  put a label "A reserver"-->
+    <option value="" disabled selected>Espace</option>
+    <option *ngFor="let space of valSpace" [value]="space">{{space}}</option>
+  </select>
+  <br>
+  <br>
+
+
+<!--Set the start number of the reservationForm.start attribute -->
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Heure de debut" name="start" [(ngModel)]="reservationForm.start" #start="ngModel" required>
+      <mat-error *ngIf="start.invalid && (start.dirty || start.touched)">
+        Heure de debut is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+<!--Set the end number of the reservationForm.end attribute -->
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Heure de fin" name="end" [(ngModel)]="reservationForm.end" #end="ngModel" required>
+      <mat-error *ngIf="end.invalid && (end.dirty || end.touched)">
+        Heure de fin is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+
+  <div class="action-btn" fxLayoutAlign="space-between center">
+    <button class="connexionButton" mat-flat-button color="primary"  type="submit" [disabled]="f.form.invalid">Ajouter</button>
+  </div>
+  <br>
+  <div class="action-btn" fxLayoutAlign="space-between center">
+    <button class="connexionButton" mat-flat-button color="warn" routerLink="/client/reservation">Retour</button>
+  </div>
+</form>
+

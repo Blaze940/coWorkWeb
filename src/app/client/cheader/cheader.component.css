@@ -1,0 +1,5 @@
+mat-toolbar {
+  /*background :  #330066 ;*/
+  background :  linear-gradient(to right top, darkblue, black);
+  color: white;
+}

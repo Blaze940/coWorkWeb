@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import {Routes, RouterModule} from "@angular/router";
 import {NotFoundComponent} from "./pages/not-found/not-found.component";
 import {HomeComponent} from "./pages/home/home.component";
@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'client', loadChildren: () => import('./client/client.module')
       .then(m => m.ClientModule) // Sert a l'activer une fois chargé
-    , canActivate: [AuthGuard]
+    ,
   },
   {
     path:'auth', loadChildren: () => import('./auth/auth.module')

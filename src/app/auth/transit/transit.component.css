@@ -1,0 +1,12 @@
+/*put buttons bigger*/
+button {
+  font-size: 1.5em;
+  size: landscape;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

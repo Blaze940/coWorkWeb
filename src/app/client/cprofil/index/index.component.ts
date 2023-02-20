@@ -5,24 +5,25 @@ import {HttpClient} from "@angular/common/http";
 import {UserService} from "../../../_services/user.service";
 
 @Component({
-  selector: 'app-s-add',
-  templateUrl: './s-add.component.html',
-  styleUrls: ['./s-add.component.css']
+  selector: 'app-index',
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.css']
 })
-export class SAddComponent implements OnInit {
+export class IndexComponent implements OnInit {
+
   userForm  : IUser = {
     id : 0,
     pseudo: '',
     email: '',
     password: '',
-    role: 'CLIENT',
-    mealTray: '63011c45985ae79b708fa016',
+    role: '',
+    mealTray: '',
     booked: [],
     participations: [],
     surname: '',
     lastname: '',
     address: '',
-    card: '6303b059c2f74e896047234e',
+    card: '',
     isStudent: false,
     dateSubscription: new Date(),
     hasPaid: false,
@@ -42,23 +43,13 @@ export class SAddComponent implements OnInit {
     // let uid : number = this.us.getCurrentId() ;
 
     //---------------------------------------
-    // this.http.get('http://localhost:5000/API/user/email/'+this.us.currentUserEmail).subscribe(
-    //   (user: any) => {
-    //     console.log(user);
-    //     //preset userForm with user data
-    //     this.userForm = user ;
-    //     this.userForm.id = user._id;
-    //   });
-
-  };
-
-
-
-  onSubmit(){
-    console.log(this.userForm);
-    this.http.post('http://localhost:5000/API/user/signup', this.userForm).subscribe(
+    this.http.get('http://localhost:5000/API/user/email/'+this.us.currentUserEmail).subscribe(
       (user: any) => {
         console.log(user);
+        //preset userForm with user data
+        this.userForm = user ;
+        this.userForm.id = user._id;
       });
-  }
+
+  };
 }

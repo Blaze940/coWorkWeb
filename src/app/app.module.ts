@@ -15,6 +15,7 @@ import {MaterialUiModule} from "./material-ui/material-ui.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {HttpClientModule} from "@angular/common/http";
 import { AlertComponent } from './components/alert/alert.component';
+import {MatNativeDateModule} from "@angular/material/core";
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AlertComponent } from './components/alert/alert.component';
     MaterialUiModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatNativeDateModule,
   ],
   providers: [], ///tjrs actif maintenant
   bootstrap: [AppComponent]

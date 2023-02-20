@@ -20,6 +20,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.tokenService.clear() ;
     this.loginForm = this.fb.group({
       lastname: ['',[Validators.required,Validators.minLength(2),Validators.maxLength(50)]],
       surname: ['',[Validators.required,Validators.minLength(2),Validators.maxLength(60)]],
@@ -37,6 +38,8 @@ export class RegistrationComponent implements OnInit {
 
   onSubmit() {
     //const a = this.loginForm.get('email')?.value ;
+    this.us.currentUserEmail = this.loginForm.get('email')?.value;
+    this.us.setCurrentUser(this.us.currentUserEmail);
     this.authService.register(this.loginForm.value).subscribe(
       (count : any) => {
         this.authService.login(this.loginForm.value).subscribe(
@@ -44,8 +47,8 @@ export class RegistrationComponent implements OnInit {
             console.log(data.token);
             this.tokenService.saveToken(data.token);
             console.log("User logué : " + this.loginForm);
-            this.us.setCurrentUser(this.loginForm.get('email')?.value);
             this.us.setAllUser() ;
+            this.router.navigate(['/auth/transit']);
           },
           (error) => {
             //this.alert.error(error);

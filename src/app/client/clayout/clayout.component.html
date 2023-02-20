@@ -1,0 +1,46 @@
+<app-cheader></app-cheader>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+    />
+
+    <h4 class="name">{{surname | titlecase}} {{lastname | uppercase}}</h4>
+    <p class="designation">Software Engineer</p>
+    <p class="role">{{role}}</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="profil">
+      <mat-icon>person</mat-icon>
+      <span>Profil</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="space">
+      <mat-icon>space</mat-icon>
+      <span>Espaces Co'Work</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="reservation">
+      <mat-icon>home</mat-icon>
+      <span>Reservation</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="settings">
+      <mat-icon>settings</mat-icon>
+      <span>Parametres</span>
+    </button>
+    <button  (click)="logout()" mat-button class="menu-button" >
+      <mat-icon>exit_to_app</mat-icon>
+      <span> Deconnexion </span>
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

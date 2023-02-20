@@ -2,27 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import {IUser} from "../../../_interfaces/user";
 import {ActivatedRoute} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
-import {UserService} from "../../../_services/user.service";
 
 @Component({
-  selector: 'app-s-add',
-  templateUrl: './s-add.component.html',
-  styleUrls: ['./s-add.component.css']
+  selector: 'app-r-edit',
+  templateUrl: './r-edit.component.html',
+  styleUrls: ['./r-edit.component.css']
 })
-export class SAddComponent implements OnInit {
-  userForm  : IUser = {
+export class REditComponent implements OnInit {
+
+  userForm : IUser = {
     id : 0,
     pseudo: '',
     email: '',
     password: '',
-    role: 'CLIENT',
-    mealTray: '63011c45985ae79b708fa016',
+    role: '',
+    mealTray: '',
     booked: [],
     participations: [],
     surname: '',
     lastname: '',
     address: '',
-    card: '6303b059c2f74e896047234e',
+    card: '',
     isStudent: false,
     dateSubscription: new Date(),
     hasPaid: false,
@@ -30,25 +30,24 @@ export class SAddComponent implements OnInit {
     dateEndSubscription: new Date(),
     dateRenewal: new Date()
   }
-
   constructor(private activated: ActivatedRoute,
               private http : HttpClient,
-              private us : UserService
   ){
   }
 
   ngOnInit(): void {
+    let uid = this.activated.snapshot.paramMap.get('uid') ;
+    console.log(uid) ;
 
-    // let uid : number = this.us.getCurrentId() ;
 
     //---------------------------------------
-    // this.http.get('http://localhost:5000/API/user/email/'+this.us.currentUserEmail).subscribe(
-    //   (user: any) => {
-    //     console.log(user);
-    //     //preset userForm with user data
-    //     this.userForm = user ;
-    //     this.userForm.id = user._id;
-    //   });
+    this.http.get('http://localhost:5000/API/user/id/'+uid).subscribe(
+      (user: any) => {
+        console.log(user);
+        //preset userForm with user data
+        this.userForm = user ;
+        this.userForm.id = user._id;
+      });
 
   };
 
@@ -56,7 +55,7 @@ export class SAddComponent implements OnInit {
 
   onSubmit(){
     console.log(this.userForm);
-    this.http.post('http://localhost:5000/API/user/signup', this.userForm).subscribe(
+    this.http.put('http://localhost:5000/API/user/id/'+this.userForm.id, this.userForm).subscribe(
       (user: any) => {
         console.log(user);
       });

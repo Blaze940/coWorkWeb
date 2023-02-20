@@ -1,0 +1,65 @@
+.content {
+  height: calc(100vh - 130px);
+  border-radius: 10px;
+  margin: 16px 16px 16px 32px;
+  padding: 16px;
+  overflow: auto;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  /*background: #002b5c;*/
+  background :  linear-gradient(to right top, black, darkblue);
+  /*background : #330066 ;*/
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  display : flex ;
+}
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+}
+
+.menu-button .mat-icon {
+  margin-right: 8px;
+}
+
+.avatar {
+  margin-top: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.role{
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size : 0.6rem;
+}

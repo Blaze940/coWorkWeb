@@ -1,0 +1,78 @@
+.mat-display-2{
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.00938em;
+  color : white ;
+}
+/*Put the button above each text and place them in the center of the box*/
+button {
+  margin: 0 auto;
+  display: block;
+}
+/*Put the text above each button and place them in the center of the box*/
+input {
+  margin: 0 auto;
+  display: block;
+}
+/*Put the text above each button and place them in the center of the box*/
+select {
+  margin: 0 auto;
+  display: block;
+}
+
+/* Language: css */
+/* Path: src\app\admin\user\u-edit\u-edit.component.css */
+
+.content{
+  width: 100%;
+  max-width: 600px;
+  padding: initial;
+  font-size : 50px ;
+  /*place it in center of their box, just below mat icons*/
+  text-align: center;
+  /* put space betweent the text and button*/
+  margin-bottom: 20px;
+  color : white ;
+}
+
+.contentList{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+.contentAdd{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  font-size: 20px;
+}
+.contentEdit {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+.contentDelete {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+/*make featuresection longer and spâce between box larger*/
+.features-section {
+  color : white ;
+  height: 100%;
+  width: 100%;
+  max-width: 2000px;
+  padding: 25px;
+  margin: 0 auto;
+  text-align: center;
+
+  background :  linear-gradient(to right top, black, darkblue);
+  /*border radius*/
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}

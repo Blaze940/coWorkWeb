@@ -4,7 +4,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {Router} from "@angular/router";
 import {UserService} from "../../../_services/user.service";
-import {IUser} from "../../../_interfaces/user";
+
 
 @Component({
   selector: 'app-u-all',
@@ -14,33 +14,39 @@ import {IUser} from "../../../_interfaces/user";
 export class UAllComponent implements OnInit {
 
   displayedColumns = ['id', 'surname', 'lastname','address','email','role','action'];
-  userList : any[][] = [];
+  userList : any[] = [];
   // userAction : string = 'edit' || 'delete';
   dataSource : any ;
 
   constructor(private http : HttpClient, private router : Router,private us : UserService) {
-    const currentUserEmail = this.us.getCurrentUserEmail() ;
+    //console.log((this.us.getTabUser())) ;
+  }
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator | undefined ;
+
+  ngOnInit(): void {
     let positionSuppr = 0 ;
+    let tmpTab : any[] = [] ;
     this.http.get('http://localhost:5000/API/user').subscribe(
       (users: any) => {
         //console.log(users);
         //console.log(users[0]);
-        this.userList.push(users);
+        tmpTab.push(users);
 
         //Enlever le user principale pour eviter qu'on le delete
-        for(let user of this.userList){
+        for(let user of tmpTab){
           console.log("User boucle : "+ user) ;
           for(let key of user ){
             console.log("champ : "+key.email ) ;
-            if(key.email === currentUserEmail){
-              this.userList[positionSuppr].splice(positionSuppr,1) ;
+            if(key.email == this.us.currentUserEmail){
+              tmpTab[0].splice(positionSuppr,1) ;
               console.log("Bien supprimé") ;
             }
+            positionSuppr++ ;
           }
-          positionSuppr++ ;
         }
+        this.userList.push(tmpTab);
         //console.log("Liste de user : "+ this.userList[0][0].email) ;
-        this.dataSource = new MatTableDataSource(this.userList[0]);
+        this.dataSource = new MatTableDataSource(this.userList[0][0]);
         //set userAction to edit
         this.dataSource.paginator = this.paginator;
       },
@@ -48,11 +54,6 @@ export class UAllComponent implements OnInit {
         console.log(error);
       }
     );
-    //console.log((this.us.getTabUser())) ;
-  }
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator | undefined ;
-
-  ngOnInit(): void {
     // setTimeout(() => this.dataSource.paginator = this.paginator);
     // this.dataSource.paginator = this.paginator;
   }
