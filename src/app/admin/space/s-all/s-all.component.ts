@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
-import {UserService} from "../../../_services/user.service";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 
@@ -18,7 +17,7 @@ export class SAllComponent implements OnInit {
 
   constructor(private http : HttpClient, private router : Router) {
 
-    this.http.get('http://localhost:5000/API/space').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/space').subscribe(
       (spaces: any) => {
         console.log(spaces);
         //console.log(users[0]);

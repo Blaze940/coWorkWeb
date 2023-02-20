@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class ReservationService {
-  reservationUrl = 'http://localhost:5000/API/reservation';
+  reservationUrl = 'https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/reservation';
   reservations : any[] = [] ;
 
   constructor(private http : HttpClient) {

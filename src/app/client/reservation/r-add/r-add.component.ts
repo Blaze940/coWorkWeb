@@ -32,7 +32,7 @@ export class RAddComponent implements OnInit {
               private us : UserService,
               private uts : UtilitiesService
   ){
-    this.http.get('http://localhost:5000/API/bookable/').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/bookable/').subscribe(
       (bookables: any) => {
         console.log(bookables);
         this.bookables = bookables ;
@@ -52,7 +52,7 @@ export class RAddComponent implements OnInit {
     // let uid : number = this.us.getCurrentId() ;
 
     //---------------------------------------
-    // this.http.get('http://localhost:5000/API/user/email/'+this.us.currentUserEmail).subscribe(
+    // this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user/email/'+this.us.currentUserEmail).subscribe(
     //   (user: any) => {
     //     console.log(user);
     //     //preset userForm with user data
@@ -70,7 +70,7 @@ export class RAddComponent implements OnInit {
 
     console.log(this.reservationForm);
     this.reservationForm.isBooked = true ;
-    this.http.post('http://localhost:5000/API/reservation/', this.reservationForm).subscribe(
+    this.http.post('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/reservation/', this.reservationForm).subscribe(
       (response) => {
         console.log(response);
       },

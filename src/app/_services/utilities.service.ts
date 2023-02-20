@@ -18,7 +18,7 @@ export class UtilitiesService {
       });
   }
   getBookables() {
-    return this.http.get('http://localhost:5000/API/bookable');
+    return this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/bookable');
   }
 
   getDayFromDate(date: Date) {

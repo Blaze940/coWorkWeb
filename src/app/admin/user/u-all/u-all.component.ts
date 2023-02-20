@@ -26,7 +26,7 @@ export class UAllComponent implements OnInit {
   ngOnInit(): void {
     let positionSuppr = 0 ;
     let tmpTab : any[] = [] ;
-    this.http.get('http://localhost:5000/API/user').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user').subscribe(
       (users: any) => {
         //console.log(users);
         //console.log(users[0]);

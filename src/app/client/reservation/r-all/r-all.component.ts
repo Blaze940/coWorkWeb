@@ -26,7 +26,7 @@ export class RAllComponent implements OnInit {
     let positionSuppr = 0 ;
     let tmpTab : any[] = [] ;
     // get my reservations
-    this.http.get('http://localhost:5000/API/reservation').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/reservation').subscribe(
       (reservations: any) => {
         console.log(reservations);
         this.reservationList = reservations ;

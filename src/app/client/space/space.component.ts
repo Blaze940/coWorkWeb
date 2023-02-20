@@ -33,7 +33,7 @@ export class SpaceComponent implements OnInit {
 
   constructor(private spaceSpace : SpaceService, private reservationService : ReservationService, private http : HttpClient) {
 
-    this.http.get('http://localhost:5000/API/space').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/space').subscribe(
       (spaces: any) => {
         spaces.forEach((space:any)=>{
           if (space.name === 'Bastille'){

@@ -42,7 +42,7 @@ export class SAddComponent implements OnInit {
     // let uid : number = this.us.getCurrentId() ;
 
     //---------------------------------------
-    // this.http.get('http://localhost:5000/API/user/email/'+this.us.currentUserEmail).subscribe(
+    // this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user/email/'+this.us.currentUserEmail).subscribe(
     //   (user: any) => {
     //     console.log(user);
     //     //preset userForm with user data
@@ -56,7 +56,7 @@ export class SAddComponent implements OnInit {
 
   onSubmit(){
     console.log(this.userForm);
-    this.http.post('http://localhost:5000/API/user/signup', this.userForm).subscribe(
+    this.http.post('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user/signup', this.userForm).subscribe(
       (user: any) => {
         console.log(user);
       });
