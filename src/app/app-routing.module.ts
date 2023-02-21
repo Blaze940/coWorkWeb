@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-
 import {Routes, RouterModule} from "@angular/router";
 import {NotFoundComponent} from "./pages/not-found/not-found.component";
 import {HomeComponent} from "./pages/home/home.component";
 import {AuthGuard} from "./_helpers/auth.guard";
+import {LoadingPageComponent} from "./pages/loading-page/loading-page.component";
 
 const routes: Routes = [
   {
@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path:'auth', loadChildren: () => import('./auth/auth.module')
       .then(m => m.AuthModule)
+  },
+  {
+    path:'loading-page',
+    component : LoadingPageComponent
   },
 
   //A laisse en dernier pour que les autres routes soient trouvées

@@ -31,6 +31,9 @@ export class SettingsComponent implements OnInit {
         //preset userForm with user data
         this.userForm.id = user._id;
         console.log("id : " +this.userForm.id) ;
+      },
+      (error) => {
+        console.log(error);
       });
 
   };
