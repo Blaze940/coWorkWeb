@@ -19,15 +19,15 @@ export class SAllComponent implements OnInit {
 
     this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/space').subscribe(
       (spaces: any) => {
-        console.log(spaces);
-        //console.log(users[0]);
+
+        //
         this.spaceList.push(spaces);
         this.dataSource = new MatTableDataSource(this.spaceList[0]);
         //set userAction to edit
         this.dataSource.paginator = this.paginator;
       },
       (error) => {
-        console.log(error);
+          return error;
       }) ;
   }
 

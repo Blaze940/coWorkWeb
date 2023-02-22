@@ -20,17 +20,17 @@ export class RDeleteComponent implements OnInit {
       this.deleteReservation() ;
   },
     (error) => {
-      console.log(error);
+      return error;
     });
   };
 
   deleteReservation(){
     this.http.delete(`https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/reservation/del/${this.reservationId}`).subscribe(
       (res) => {
-        console.log(res);
+        return res;
       },
       (error) => {
-        console.log(error);
+        return error;
       }
     );
   }

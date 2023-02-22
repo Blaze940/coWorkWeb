@@ -21,7 +21,7 @@ export class UDeleteComponent implements OnInit {
       (user: any) => {
         this.lastname = user.lastname;
         this.surname = user.surname;
-        console.log('User with id : '+uid+' has been deleted');
+
       }
       );
   }

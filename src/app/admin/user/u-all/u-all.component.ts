@@ -28,8 +28,8 @@ export class UAllComponent implements OnInit {
     let tmpTab : any[] = [] ;
     this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user').subscribe(
       (users: any) => {
-        //console.log(users);
-        //console.log(users[0]);
+        //
+        //
         tmpTab.push(users);
 
         //Enlever le user principale pour eviter qu'on le delete
@@ -51,7 +51,7 @@ export class UAllComponent implements OnInit {
         this.dataSource.paginator = this.paginator;
       },
       (error) => {
-        console.log(error);
+          return error;
       }
     );
     // setTimeout(() => this.dataSource.paginator = this.paginator);

@@ -63,7 +63,7 @@ export class SpaceComponent implements OnInit {
         })
       },
       (error) => {
-        console.log(error);
+        return error;
       }
 )
   }

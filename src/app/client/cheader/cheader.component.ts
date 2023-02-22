@@ -14,7 +14,7 @@ export class CheaderComponent implements OnInit {
   constructor(private tokenService : TokenService, private authService : AuthService, private us :UserService, private http : HttpClient ) {
     this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user/email/'+this.us.currentUserEmail).subscribe(
       (user: any) => {
-        console.log(user);
+
         //preset userForm with user data
         this.surname = user.surname ;
       });

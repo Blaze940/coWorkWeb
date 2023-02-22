@@ -13,7 +13,7 @@ export class UtilitiesService {
   constructor(private http : HttpClient) {
     this.getBookables().subscribe(
       (bookables: any) => {
-        console.log(bookables);
+
         this.bookableTable = bookables ;
       });
   }

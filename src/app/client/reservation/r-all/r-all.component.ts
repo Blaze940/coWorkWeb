@@ -27,7 +27,7 @@ export class RAllComponent implements OnInit {
     // get my reservations
     this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/reservation').subscribe(
       (reservations: any) => {
-        console.log(reservations);
+
         this.reservationList = reservations ;
         this.reservationList.forEach((reservation)=>{
           if (reservation.userOn === this.us.currentUserEmail){

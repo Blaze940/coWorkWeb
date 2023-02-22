@@ -44,15 +44,15 @@ export class RegistrationComponent implements OnInit {
       (count : any) => {
         this.authService.login(this.loginForm.value).subscribe(
           (data : IToken) => {
-            console.log(data.token);
+
             this.tokenService.saveToken(data.token);
-            console.log("User logué : " + this.loginForm);
+
             this.us.setAllUser() ;
             this.router.navigate(['/auth/transit']);
           },
           (error) => {
             //this.alert.error(error);
-            console.log(error);
+            return error;
           }
         );
     },
@@ -63,15 +63,15 @@ export class RegistrationComponent implements OnInit {
     )
     // this.authService.login(this.loginForm.value).subscribe(
     //   (data : IToken) => {
-    //     console.log(data.token);
+    //
     //     this.tokenService.saveToken(data.token);
-    //     console.log("User logué : " + this.loginForm);
+    //
     //     this.us.setCurrentUser(this.loginForm.get('email')?.value);
     //     this.us.setAllUser() ;
     //   },
     //   (error) => {
     //     //this.alert.error(error);
-    //     console.log(error);
+    //
     //   }
     // );
     // //

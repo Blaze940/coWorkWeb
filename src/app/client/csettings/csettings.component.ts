@@ -28,7 +28,7 @@ export class CsettingsComponent implements OnInit {
     //---------------------------------------
     this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user/email/'+this.us.currentUserEmail).subscribe(
       (user: any) => {
-        console.log(user);
+
         //preset userForm with user data
         this.userForm.id = user._id;
         console.log("id : " +this.userForm.id) ;
@@ -39,11 +39,11 @@ export class CsettingsComponent implements OnInit {
 
 
   onSubmit(){
-    console.log("user complet : "+this.userForm);
-    console.log("mp : "+this.userForm);
+
+
     this.http.put('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user/id/'+this.userForm.id, this.userForm.password).subscribe(
       (user: any) => {
-        console.log(user);
+        return user;
       });
   }
 }

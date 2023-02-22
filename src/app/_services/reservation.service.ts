@@ -11,7 +11,7 @@ export class ReservationService {
   constructor(private http : HttpClient) {
     this.http.get(this.reservationUrl).subscribe(
       (reservations : any) => {
-        console.log(reservations);
+
         this.reservations = reservations ;
       }
     )
