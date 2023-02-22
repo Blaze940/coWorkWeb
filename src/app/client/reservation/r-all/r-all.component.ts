@@ -23,7 +23,6 @@ export class RAllComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator | undefined ;
 
   ngOnInit(): void {
-    let positionSuppr = 0 ;
     let tmpTab : any[] = [] ;
     // get my reservations
     this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/reservation').subscribe(
@@ -42,6 +41,9 @@ export class RAllComponent implements OnInit {
 
     // setTimeout(() => this.dataSource.paginator = this.paginator);
     // this.dataSource.paginator = this.paginator;
+  }
+  refresh(){
+    this.ngOnInit();
   }
 
   sendTo(action: string = 'edit' || 'delete', reservation: any ) : void{

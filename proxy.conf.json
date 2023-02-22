@@ -1,0 +1,7 @@
+{
+  "/API/*": {
+    "target": "https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net",
+    "secure": true,
+    "changeOrigin": true
+  }
+}
