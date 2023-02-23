@@ -5,7 +5,7 @@
 <form #f="ngForm" name="form" (ngSubmit)="f.form.valid && onSubmit()">
   <div class="form-group">
     <mat-form-field class="full-width" appearance="outline">
-      <input matInput type="password" placeholder="Nouveau mot de passe" name="password" [(ngModel)]="userForm.password" #password="ngModel" >
+      <input matInput type="password" placeholder="Nouveau mot de passe" name="password" [(ngModel)]="userForm.password" #password="ngModel" readonly>
       <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
         Mot de passe is required
       </mat-error>
@@ -16,7 +16,7 @@
 
 
   <div class="action-btn" fxLayoutAlign="space-between center">
-    <button class="connexionButton" mat-flat-button color="primary"  type="submit" [disabled]="false">Sauvegarder</button>
+    <button class="connexionButton" mat-flat-button color="primary"  type="submit" [disabled]="true">Sauvegarder</button>
   </div>
   <br>
   <div class="action-btn" fxLayoutAlign="space-between center">
