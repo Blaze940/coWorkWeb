@@ -12,30 +12,30 @@ export class SpaceService {
 
 
   constructor(private http: HttpClient) {
-    this.http.get('http://localhost:5000/API/space/name/BASTILLE').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/space/name/BASTILLE').subscribe(
       (space: any) => {
-        console.log(space[0]);
+
         this.bastille = space;
-        console.log(this.bastille);
+
       });
-    this.http.get('http://localhost:5000/API/space/name/ITALIE').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/space/name/ITALIE').subscribe(
       (space: any) => {
-        console.log(space[0]);
+
         this.italie = space;
-        console.log(this.italie);
+
       }
     );
-    this.http.get('http://localhost:5000/API/space/name/ODEON').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/space/name/ODEON').subscribe(
       (space: any) => {
-        console.log(space[0]);
+
         this.odeon = space;
-        console.log(this.odeon);
+
       });
-    this.http.get('http://localhost:5000/API/space/name/REPUBLIQUE').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/space/name/REPUBLIQUE').subscribe(
       (space: any) => {
-        console.log(space[0]);
+
         this.republique = space;
-        console.log(this.republique);
+
       }
     );
 

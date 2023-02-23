@@ -13,12 +13,12 @@ export class UtilitiesService {
   constructor(private http : HttpClient) {
     this.getBookables().subscribe(
       (bookables: any) => {
-        console.log(bookables);
+
         this.bookableTable = bookables ;
       });
   }
   getBookables() {
-    return this.http.get('http://localhost:5000/API/bookable');
+    return this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/bookable');
   }
 
   getDayFromDate(date: Date) {

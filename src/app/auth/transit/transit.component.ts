@@ -16,7 +16,6 @@ export class TransitComponent implements OnInit {
 
   }
   sendTo(page:string){
-
     this.router.navigate([page]);
   }
 

@@ -42,9 +42,9 @@ export class IndexComponent implements OnInit {
     // let uid : number = this.us.getCurrentId() ;
 
     //---------------------------------------
-    this.http.get('http://localhost:5000/API/user/email/'+this.us.currentUserEmail).subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user/email/'+this.us.currentUserEmail).subscribe(
       (user: any) => {
-        console.log(user);
+
         //preset userForm with user data
         this.userForm = user ;
         this.userForm.id = user._id;

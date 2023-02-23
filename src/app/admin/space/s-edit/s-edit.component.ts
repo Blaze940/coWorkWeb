@@ -31,13 +31,12 @@ export class SEditComponent implements OnInit {
 
   ngOnInit(): void {
     let uid = this.activated.snapshot.paramMap.get('uid') ;
-    console.log(uid) ;
 
 
     //---------------------------------------
-    this.http.get('http://localhost:5000/API/space/id/'+uid).subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/space/id/'+uid).subscribe(
       (space: any) => {
-        console.log(space);
+
         //preset spaceForm with space data
         this.spaceForm = space ;
         this.spaceForm.id = space._id;
@@ -48,10 +47,10 @@ export class SEditComponent implements OnInit {
 
 
   onSubmit(){
-    console.log(this.spaceForm);
-    this.http.put('http://localhost:5000/API/space/id/'+this.spaceForm.id, this.spaceForm).subscribe(
+
+    this.http.put('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/space/id/'+this.spaceForm.id, this.spaceForm).subscribe(
       (space: any) => {
-        console.log(space);
+          return space;
       });
   }
 

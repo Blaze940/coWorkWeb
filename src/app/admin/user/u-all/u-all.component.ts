@@ -19,39 +19,34 @@ export class UAllComponent implements OnInit {
   dataSource : any ;
 
   constructor(private http : HttpClient, private router : Router,private us : UserService) {
-    //console.log((this.us.getTabUser())) ;
   }
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator | undefined ;
 
   ngOnInit(): void {
     let positionSuppr = 0 ;
     let tmpTab : any[] = [] ;
-    this.http.get('http://localhost:5000/API/user').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user').subscribe(
       (users: any) => {
-        //console.log(users);
-        //console.log(users[0]);
+        //
+        //
         tmpTab.push(users);
 
         //Enlever le user principale pour eviter qu'on le delete
         for(let user of tmpTab){
-          console.log("User boucle : "+ user) ;
           for(let key of user ){
-            console.log("champ : "+key.email ) ;
             if(key.email == this.us.currentUserEmail){
               tmpTab[0].splice(positionSuppr,1) ;
-              console.log("Bien supprimé") ;
             }
             positionSuppr++ ;
           }
         }
         this.userList.push(tmpTab);
-        //console.log("Liste de user : "+ this.userList[0][0].email) ;
         this.dataSource = new MatTableDataSource(this.userList[0][0]);
         //set userAction to edit
         this.dataSource.paginator = this.paginator;
       },
       (error) => {
-        console.log(error);
+          return error;
       }
     );
     // setTimeout(() => this.dataSource.paginator = this.paginator);
@@ -60,7 +55,7 @@ export class UAllComponent implements OnInit {
 
   sendTo(action: string = 'edit' || 'delete', user: any ) : void{
     this.router.navigate([`/admin/user/${action}/${user._id}`])
-      .then(r => console.log(r))
-      .catch(e => console.log(e));
+      .then(r => r)
+      .catch(e => e);
   }
 }

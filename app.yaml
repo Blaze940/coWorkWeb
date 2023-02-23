@@ -1,0 +1,11 @@
+runtime: nodejs16
+
+handlers:
+  - url: /(.*\.(js|css|png|jpg|gif|woff2|ttf|svg|ico))$
+    static_files: dist/co-work-web/\1
+    upload: dist/co-work-web/(.*\.(js|css|png|jpg|gif|woff2|ttf|svg|ico))$
+
+  - url: /(.*)
+    static_files: dist/co-work-web/index.html
+    upload: dist/co-work-web/index.html
+

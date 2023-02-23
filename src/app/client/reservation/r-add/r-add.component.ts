@@ -11,6 +11,7 @@ import {UtilitiesService} from "../../../_services/utilities.service";
   styleUrls: ['./r-add.component.css']
 })
 export class RAddComponent implements OnInit {
+
   reservationForm   = {
     id : 0,
     day : '',
@@ -22,6 +23,7 @@ export class RAddComponent implements OnInit {
     end : '23',
     isBooked : false
   }
+  isAdded = false;
   bookables : any[] = [] ;
   valProduct : string[] = [] ;
   valDay : string[] = ['LUNDI', 'MARDI', 'MERCREDI', 'JEUDI', 'VENDREDI', 'SAMEDI', 'DIMANCHE'] ;
@@ -32,50 +34,37 @@ export class RAddComponent implements OnInit {
               private us : UserService,
               private uts : UtilitiesService
   ){
-    this.http.get('http://localhost:5000/API/bookable/').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/bookable/').subscribe(
       (bookables: any) => {
-        console.log(bookables);
+
         this.bookables = bookables ;
         this.bookables.forEach((bookable)=>{
           this.valProduct.push(bookable.name);
         })
       },
       (error) => {
-        console.log(error);
+          return error;
       });
 
     this.reservationForm.userOn = this.us.currentUserEmail ;
   }
 
   ngOnInit(): void {
-
-    // let uid : number = this.us.getCurrentId() ;
-
-    //---------------------------------------
-    // this.http.get('http://localhost:5000/API/user/email/'+this.us.currentUserEmail).subscribe(
-    //   (user: any) => {
-    //     console.log(user);
-    //     //preset userForm with user data
-    //     this.userForm = user ;
-    //     this.userForm.id = user._id;
-    //   });
-
   };
 
 
 
   onSubmit(){
    // set automatically reservation day from choice of mat date picker and put it in uppercase
+    this.isAdded = true;
     this.reservationForm.day = this.uts.getDayFromDate(this.reservationForm.date) ;
-
-    console.log(this.reservationForm);
     this.reservationForm.isBooked = true ;
-    this.http.post('http://localhost:5000/API/reservation/', this.reservationForm).subscribe(
+    this.http.post('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/reservation/', this.reservationForm).subscribe(
       (response) => {
-        console.log(response);
+        return response;
       },
       (error) => {
-        console.log(error);
+        return error;
       })
   }
 }

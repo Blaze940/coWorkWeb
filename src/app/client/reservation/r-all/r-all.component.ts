@@ -18,17 +18,16 @@ export class RAllComponent implements OnInit {
   dataSource : any ;
 
   constructor(private http : HttpClient, private router : Router,private us : UserService) {
-    //console.log((this.us.getTabreservation())) ;
+
   }
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator | undefined ;
 
   ngOnInit(): void {
-    let positionSuppr = 0 ;
     let tmpTab : any[] = [] ;
     // get my reservations
-    this.http.get('http://localhost:5000/API/reservation').subscribe(
+    this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/reservation').subscribe(
       (reservations: any) => {
-        console.log(reservations);
+
         this.reservationList = reservations ;
         this.reservationList.forEach((reservation)=>{
           if (reservation.userOn === this.us.currentUserEmail){
@@ -43,10 +42,13 @@ export class RAllComponent implements OnInit {
     // setTimeout(() => this.dataSource.paginator = this.paginator);
     // this.dataSource.paginator = this.paginator;
   }
+  refresh(){
+    this.ngOnInit();
+  }
 
   sendTo(action: string = 'edit' || 'delete', reservation: any ) : void{
     this.router.navigate([`/client/reservation/${action}/${reservation._id}`])
-      .then(r => console.log(r))
-      .catch(e => console.log(e));
+      .then(r => r)
+      .catch(e => e);
   }
 }

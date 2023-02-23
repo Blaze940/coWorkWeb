@@ -16,6 +16,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {HttpClientModule} from "@angular/common/http";
 import { AlertComponent } from './components/alert/alert.component';
 import {MatNativeDateModule} from "@angular/material/core";
+import {LoadingPageComponent} from './pages/loading-page/loading-page.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import {MatNativeDateModule} from "@angular/material/core";
     NotFoundComponent,
     HomeComponent,
     AlertComponent,
+    LoadingPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import {MatNativeDateModule} from "@angular/material/core";
     ReactiveFormsModule,
     HttpClientModule,
     MatNativeDateModule,
+
   ],
   providers: [], ///tjrs actif maintenant
   bootstrap: [AppComponent]
