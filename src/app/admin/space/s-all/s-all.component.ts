@@ -40,7 +40,7 @@ export class SAllComponent implements OnInit {
 
   sendTo(action: string = 'edit' || 'delete', space: any ) : void{
     this.router.navigate([`/admin/space/${action}/${space._id}`])
-      .then(r => console.log(r))
-      .catch(e => console.log(e));
+      .then(r => r)
+      .catch(e =>e);
   }
 }

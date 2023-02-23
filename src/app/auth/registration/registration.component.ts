@@ -51,13 +51,12 @@ export class RegistrationComponent implements OnInit {
             this.router.navigate(['/auth/transit']);
           },
           (error) => {
-            //this.alert.error(error);
             return error;
           }
         );
     },
       (error) => {
-        console.log(error) ;
+        return error;
       }
 
     )

@@ -15,7 +15,6 @@ export class UDeleteComponent implements OnInit {
 
   ngOnInit(): void {
     let uid = this.activated.snapshot.paramMap.get('uid') ;
-    console.log(uid) ;
 
     this.http.delete('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user/'+uid).subscribe(
       (user: any) => {

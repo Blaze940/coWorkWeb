@@ -11,6 +11,7 @@ import {UtilitiesService} from "../../../_services/utilities.service";
   styleUrls: ['./r-add.component.css']
 })
 export class RAddComponent implements OnInit {
+
   reservationForm   = {
     id : 0,
     day : '',
@@ -22,6 +23,7 @@ export class RAddComponent implements OnInit {
     end : '23',
     isBooked : false
   }
+  isAdded = false;
   bookables : any[] = [] ;
   valProduct : string[] = [] ;
   valDay : string[] = ['LUNDI', 'MARDI', 'MERCREDI', 'JEUDI', 'VENDREDI', 'SAMEDI', 'DIMANCHE'] ;
@@ -48,27 +50,14 @@ export class RAddComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    // let uid : number = this.us.getCurrentId() ;
-
-    //---------------------------------------
-    // this.http.get('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/user/email/'+this.us.currentUserEmail).subscribe(
-    //   (user: any) => {
-    //
-    //     //preset userForm with user data
-    //     this.userForm = user ;
-    //     this.userForm.id = user._id;
-    //   });
-
   };
 
 
 
   onSubmit(){
    // set automatically reservation day from choice of mat date picker and put it in uppercase
+    this.isAdded = true;
     this.reservationForm.day = this.uts.getDayFromDate(this.reservationForm.date) ;
-
-
     this.reservationForm.isBooked = true ;
     this.http.post('https://europe-west1-cloud-esgi-coworkapp.cloudfunctions.net/gcloud_function_cowork/API/reservation/', this.reservationForm).subscribe(
       (response) => {

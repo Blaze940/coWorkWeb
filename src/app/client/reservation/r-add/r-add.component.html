@@ -63,5 +63,8 @@
   <div class="action-btn" fxLayoutAlign="space-between center">
     <button class="connexionButton" mat-flat-button color="warn" routerLink="/client/reservation">Retour</button>
   </div>
+  <div class="reservationAdd" fxLayoutAlign="space-between center" >
+    <p *ngIf="isAdded" > La reservation a ete réalisée</p>
+  </div>
 </form>
 

@@ -19,7 +19,6 @@ export class UAllComponent implements OnInit {
   dataSource : any ;
 
   constructor(private http : HttpClient, private router : Router,private us : UserService) {
-    //console.log((this.us.getTabUser())) ;
   }
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator | undefined ;
 
@@ -34,18 +33,14 @@ export class UAllComponent implements OnInit {
 
         //Enlever le user principale pour eviter qu'on le delete
         for(let user of tmpTab){
-          console.log("User boucle : "+ user) ;
           for(let key of user ){
-            console.log("champ : "+key.email ) ;
             if(key.email == this.us.currentUserEmail){
               tmpTab[0].splice(positionSuppr,1) ;
-              console.log("Bien supprimé") ;
             }
             positionSuppr++ ;
           }
         }
         this.userList.push(tmpTab);
-        //console.log("Liste de user : "+ this.userList[0][0].email) ;
         this.dataSource = new MatTableDataSource(this.userList[0][0]);
         //set userAction to edit
         this.dataSource.paginator = this.paginator;
@@ -60,7 +55,7 @@ export class UAllComponent implements OnInit {
 
   sendTo(action: string = 'edit' || 'delete', user: any ) : void{
     this.router.navigate([`/admin/user/${action}/${user._id}`])
-      .then(r => console.log(r))
-      .catch(e => console.log(e));
+      .then(r => r)
+      .catch(e => e);
   }
 }

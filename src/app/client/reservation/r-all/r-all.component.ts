@@ -18,7 +18,7 @@ export class RAllComponent implements OnInit {
   dataSource : any ;
 
   constructor(private http : HttpClient, private router : Router,private us : UserService) {
-    //console.log((this.us.getTabreservation())) ;
+
   }
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator | undefined ;
 
@@ -48,7 +48,7 @@ export class RAllComponent implements OnInit {
 
   sendTo(action: string = 'edit' || 'delete', reservation: any ) : void{
     this.router.navigate([`/client/reservation/${action}/${reservation._id}`])
-      .then(r => console.log(r))
-      .catch(e => console.log(e));
+      .then(r => r)
+      .catch(e => e);
   }
 }

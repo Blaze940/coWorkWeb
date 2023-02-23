@@ -37,7 +37,6 @@ export class REditComponent implements OnInit {
 
   ngOnInit(): void {
     let uid = this.activated.snapshot.paramMap.get('uid') ;
-    console.log(uid) ;
 
 
     //---------------------------------------
