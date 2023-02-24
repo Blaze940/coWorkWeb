@@ -16,8 +16,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Deploy on Cloud (need authorizations)
 
-Run 'bg build' before and zip the dist directory by running 'zip -r app.zip dist app.yaml'
-Run 'gcloud app deploy' (if authorized)
+Run `ng build` before and zip the dist directory by running `zip -r app.zip dist app.yaml`
+Run `gcloud app deploy` (if authorized)
 
 ## Running unit tests
 
